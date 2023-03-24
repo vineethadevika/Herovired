@@ -1,0 +1,171 @@
+#first{
+	width: 25px;
+	height: 25px;
+}
+
+*{
+	margin:0px ;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.bg-img {
+  background-image: url("Images/pic.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+nav{
+	width: 100%;
+	height: 75px;
+	line-height: 75px;
+	padding: 0px 100px;
+	position: fixed;
+    background-color: green;
+
+}
+nav .logo p{
+font-size: 30px;
+font-weight: bold;
+float: left;
+color: white;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+cursor: pointer;
+}
+nav ul{
+	float: right;
+}
+nav li{
+	display: inline-block;
+	list-style: none;	
+}
+nav li a{
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0px 30px;
+	color: white;
+	text-decoration: none;
+}
+nav li a:hover{
+	color: orange;
+	transition: all 0.4s ease 0s;
+}
+
+.contact,.courses{
+	width: 400px;
+}
+h2{
+	text-align: center;
+	padding: 20px;
+	font-family: sans-serif;
+}
+
+.start{
+background-color: rgba(0,0,0,0.5);
+width: 100%;
+font-size: 18px;
+border-radius: 10px;
+border: 1px solid rgba(255,255,255,0.3);
+box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+color: #fff;
+}
+#submit{
+	width: 200px;
+	padding: 5px;
+	font-size: 16px;
+	align: center;
+	font-family: sans-serif;
+	border: none;
+	border-radius: 3px;
+	background-color: rgba(250,100,0,0.8);
+	color: #fff;
+	border: 1px solid rgba(255,255,255,0.3);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+}
+
+main{
+	margin-left: 120px;
+}
+.photo-gallery{
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: ;
+}
+img{
+	width: 250px;
+	height: 150px;
+	border-radius: 5px;
+}
+
+.box:hover{
+	transform: scale(2,2);
+}
+.img_deg{
+	float: right;
+	height: 250px;
+	width: 100%;
+}
+
+button a{
+	text-decoration: none;
+}
+button {
+	float: left;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: green;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 10px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
