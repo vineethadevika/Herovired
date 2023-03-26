@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #input{
+            margin-top: 50px;
+            border: 2px solid orange;
+            height:60px;
+            width:248px;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+       h1{
+        align: center;
+        color: orange;
+       }
+        .button{
+            font-size: 20px;
+            height: 60px;
+            width:60px;
+            background-color: orange;
+            color:yellow;
+        }        
+        #calculator{
+            margin-left: 460px;
+            margin-right: 500px;
+            padding-left: 50px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>MINI CALCULATOR</h1></center>
+    <div id="calculator">
+    <input id="input" type="text">
+    <table>
+        <tr>
+            <td><input class="button" type="button" id="1" value="1" onmouseover="mouseOver('1')" onmouseout="mouseOut('1')" onclick="show('1')"></input></td>
+            <td><input class="button" type="button" id="2" value="2" onmouseover="mouseOver('2')" onmouseout="mouseOut('2')" onclick="show('2')"></input></td>
+            <td><input class="button" type="button" id="3" value="3" onmouseover="mouseOver('3')" onmouseout="mouseOut('3')" onclick="show('3')"></input></td>
+            <td><input class="button" type="button" id="+" value="+" onmouseover="mouseOver('+')" onmouseout="mouseOut('+')" onclick="show('+')"></input></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" id="4" value="4" onmouseover="mouseOver('4')" onmouseout="mouseOut('4')" onclick=" show('4')"></input></td>
+            <td><input class="button" type="button" id="5" value="5" onmouseover="mouseOver('5')" onmouseout="mouseOut('5')" onclick=" show('5')"></input></td>
+            <td><input class="button" type="button" id="6"value="6" onmouseover="mouseOver('6')" onmouseout="mouseOut('6')" onclick=" show('6')"></input></td>
+            <td><input class="button" type="button" id="-" value="-" onmouseover="mouseOver('-')" onmouseout="mouseOut('-')" onclick=" show('-')"></input></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" id="7" value="7" onmouseover="mouseOver('7')" onmouseout="mouseOut('7')" onclick=" show('7')"></input></td>
+            <td><input class="button" type="button" id="8" value="8" onmouseover="mouseOver('8')" onmouseout="mouseOut('8')" onclick=" show('8')"></input></td>
+            <td><input class="button" type="button" id="9" value="9" onmouseover="mouseOver('9')" onmouseout="mouseOut('9')" onclick=" show('9')"></input></td>
+            <td><input class="button" type="button" id="*" value="*" onmouseover="mouseOver('*')" onmouseout="mouseOut('*')" onclick=" show('*')"></input></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" id="0" value="0" onmouseover="mouseOver('0')" onmouseout="mouseOut('0')" onclick=" show('0')"></input></td>
+            <td><input class="button" type="button" id="/" value="/" onmouseover="mouseOver('/')" onmouseout="mouseOut('/')" onclick=" show('/')"></input></td>
+            <td><input class="button" type="button" id="=" value="=" onmouseover="mouseOver('=')" onmouseout="mouseOut('=')" onclick=" res()"></input></td>
+            <td><input class="button" type="button" id="clr" value="clr" onmouseover="mouseOver('clr')" onmouseout="mouseOut('clr')" onclick="clearing()"></input></td>
+        </tr>
+    </table>
+</div>
+    <script>
+        function show(i){
+               let d=document.getElementById("input");
+               d.value=d.value+i;
+        }
+        function clearing(){
+           let c=document.getElementById("input");
+           c.value='';
+        }
+        function res(){
+            let ele=document.getElementById("input");
+            let e=eval(ele.value);
+            ele.value=e;
+        }
+        function mouseOver(id1){
+            let ele=document.getElementById(id1);
+            ele.style.backgroundColor="white";
+            ele.style.color="orange";
+        }
+        function mouseOut(id2){
+            let ele=document.getElementById(id2);
+            ele.style.backgroundColor="orange";
+            ele.style.color="yellow";
+        }
+    </script>
+</body>
+</html>

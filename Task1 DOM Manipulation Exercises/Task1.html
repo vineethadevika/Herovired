@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM  Manipulations</title>
+</head>
+<body>
+    
+    <p id="para">DOM Manipulations</p>     <!-- 1 -->
+
+    <script>	                    
+  	   let e1 = document.getElementById('para');       // 2
+	   e1.onmouseover = function(){
+	   this.style.color='red';
+	}
+    </script>
+                                                      
+    <script>                                         // 3
+     let e2 = document.getElementById('para');
+     e2.onmouseout = function(){
+     	this.style.color='black';
+     }
+    </script>
+    
+   <button id="btn">Button</button>                 <!-- 4 -->
+                                     
+  <script>
+	let e3 = document.getElementById("btn");        //  5
+    e3.onmouseover = function() {
+    this.innerHTML = "New Data";
+  };
+                                        
+   let e4 = document.getElementById("btn");        //  6
+   let btn1= e3.innerHTML;
+   e4.onmouseout = function() {
+   this.innerHTML = btn1;
+   };
+    
+  </script> 
+
+  <input type="text" id="input">        <!-- 7 -->
+
+  <p id="para1">Paragraph</p>
+  <input type="text" id="input1">
+  <button id="btn1">button</button>                  <!--  8 -->
+  <script>
+    var btn2 = document.getElementById("btn1");
+    var para2 = document.getElementById("para1");
+    var input = document.getElementById("input1");
+    btn2.onclick = function() {
+    input1.value = para2.innerHTML;
+}
+</script>
+
+  <ul id="list">                       <!--  9 -->
+  <li>List-Item 1</li>
+  <li>List-Item 2</li>
+  <li>List-Item 3</li>
+</ul>
+                                                  
+<script>                                                     // 10
+	let list_items = document.querySelectorAll("#list li");
+    list_items.forEach(item => {
+    item.addEventListener("mouseover", () => {
+    item.style.color = "green";
+    item.style.fontWeight = "bold";
+  });
+  
+  item.addEventListener("mouseout", () => {
+    item.style.color = "black";
+    item.style.fontWeight = "normal";
+  });
+});
+</script>
+
+</body>
+</html>
