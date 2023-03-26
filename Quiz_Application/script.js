@@ -82,9 +82,10 @@ submit.addEventListener('click',()=>{
 	};
 questionCount++;
 
-const doselectAll=()=>{
-	answers.forEach((curAnsElem)=> curAnsElem.checked=false);
-}
+// const doselectAll=()=>{
+// 	answers.forEach((curAnsElem)=> curAnsElem.checked=false);
+// }
+answers.forEach((curAnsElem)=> curAnsElem.checked=false);
 
 if(questionCount<quizDB.length){
 	loadQuestion();
